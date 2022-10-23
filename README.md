@@ -19,13 +19,17 @@
 
 
 
-*fill_db.sql* - script for filling the current Northwind Traders database.  
-*suppliers.json* - json file with collected data on suppliers.
+***fill_db.sql*** - script for filling the current Northwind Traders database.  
+***suppliers.json*** - json file with collected data on suppliers.  
+***fill_suppliers.sql*** - automatically generated sql-script with queries for processing suppliers 
+                       from the data of the suppliers.json file
 
 ---
 
 **Project composition:** 
-1. Creation of the northwind_traders database and filling it with data (fill_db.sql) is carried out independently using PostgreSQL or through the terminal (an example is given in the screen_terminal folder).
+1. Creation of the northwind_traders database and filling it with data (fill_db.sql) 
+   is carried out independently using PostgreSQL or through the terminal 
+   (an example is given in the screen_terminal folder).
 2. A new suppliers table is designed and populated with the data from the suppliers.json file.
 3. Added information about the supplier to the table with goods.
 4. An ER diagram of the final database has been built (located in the scheme_db folder).
@@ -37,14 +41,19 @@
 1. Page "Customers" (customers_page):
     - count the number of customers;
     - select all unique combinations of cities and countries in which customers are "registered";
-    - find customers and employees serving their orders, such as customers and employees from the city of London, and delivery is carried out by Speedy Express. Display the customer's company and the full name of the employee;
+    - find customers and employees serving their orders, such as customers and employees from the city of London, 
+      and delivery is carried out by Speedy Express. Display the customer's company and the full name of the employee;
     - find customers who have not made a single order. Display the name of the customer and order_id.
 2. Orders page (orders_page):
     - select all orders sorted by required_date (desc) and sorted by ship date (asc);
     - find the average value of the days leaving for delivery from the date the order was formed in the USA;
-    - find the amount for which there are goods (quantity * price) and those that are not withdrawn from sale (see the discontinued field).
+    - find the amount for which there are goods (quantity * price) and those that are not withdrawn from sale 
+      (see the discontinued field).
 3. Page "Employees" (employees_page):
-    - select records of employees (including columns for first name, last name, phone number, region) in which the region is unknown;
-    - choose such countries in which customers and suppliers are "registered" at the same time, but at the same time workers are not "registered" in them.
+    - select records of employees (including columns for first name, last name, phone number, region) 
+      in which the region is unknown;
+    - choose such countries in which customers and suppliers are "registered" at the same time, 
+      but at the same timeworkers are not "registered" in them.
 4. Page "Products" (products_page):
-    - find active (see the discontinued field) products from the Beverages and Seafood categories, of which there are less than 20 units on sale. Displays the name of the products, the number of units on sale, the name of the contact of the supplier and his phone number.
+    - find active (see the discontinued field) products from the Beverages and Seafood categories, 
+      of which there are less than 20 units on sale. Displays the name of the products, the number of units on sale, the name of the contact of the supplier and his phone number.
