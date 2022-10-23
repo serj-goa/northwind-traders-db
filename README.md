@@ -1,7 +1,5 @@
 # Northwind Traders DB
 
----
-
 #### _The project is aimed at working with the Northwind Traders database (designing additional database tables, loading / unloading data, building an ER diagram, writing SQL queries)._
 
 ---
@@ -16,7 +14,6 @@
 6. Information on contracts / orders (table ***orders***)
 7. Detailed information on contracts / orders (table ***order_details***)
 8. Information about suppliers is stored in the table ***suppliers***
-
 
 
 ***fill_db.sql*** - script for filling the current Northwind Traders database.  
