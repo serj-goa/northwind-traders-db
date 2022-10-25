@@ -54,11 +54,11 @@ def generate_sql_script(new_sql_file: str, data_json_file: str) -> None:
         suppliers_query = request_insert_suppliers_data(suppliers_data)
         save_data(filepath=new_sql_file, data=suppliers_query)  # INSERT values into suppliers table
 
-        search_supplier_id(product_suppliers=all_products, products=supplier['products'], supplier_id=idx)
+        all_products[idx] = supplier['products']
 
     save_data(filepath=new_sql_file, data=req_add_column)  # ADD column to the products table
 
-    for product, supplier_id in all_products.items():
+    for supplier_id, product in all_products.items():
         req_update_product = request_update_products(product, supplier_id)
         save_data(filepath=new_sql_file, data=req_update_product)  # UPDATE fk_suppliers into products table
 
@@ -150,17 +150,3 @@ def save_data(filepath: str, data: str) -> None:
 
     with open(filepath, 'a', encoding='utf-8') as fd:
         fd.write(data)
-
-
-def search_supplier_id(product_suppliers: dict, products: list, supplier_id: int) -> None:
-    """
-    Generates a dictionary with unique product and supplier ID`s
-    :param product_suppliers: dict
-    :param products: list
-    :param supplier_id: int
-    :return: None
-    """
-
-    for product in products:
-        if product not in product_suppliers:
-            product_suppliers[product] = supplier_id

@@ -30,4 +30,7 @@ def request_insert_suppliers_data(suppliers_data: tuple) -> str:
 
 
 def request_update_products(product: str, supplier_id: int):
-    return f"""UPDATE products SET fk_suppliers = {supplier_id} WHERE product_name = $${product}$$;\n"""
+
+    products = (f"$${prod}$$" for prod in product)
+
+    return f"""UPDATE products SET fk_suppliers = {supplier_id} WHERE product_name in ({", ".join(products)});\n"""
