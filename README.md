@@ -7,7 +7,7 @@
 *Built with:*
 
 [<img src="https://img.shields.io/badge/python-3.9-blue?style=for-the-badge&logo=Python">](https://www.python.org/)
-[<img src="https://img.shields.io/badge/SQL-grey?style=for-the-badge&logo=SQL">](https://en.wikipedia.org/wiki/SQL)
+[<img src="https://img.shields.io/badge/PostgreSQL-blue?style=for-the-badge&logo=PostgreSQL">](https://www.postgresql.org/)
 
 ---
 
