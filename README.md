@@ -25,11 +25,9 @@
 
 ***fill_db.sql*** - script for filling the current Northwind Traders database.
 
-<br />
 
 ***suppliers.json*** - json file with collected data on suppliers.
 
-<br />
 
 ***fill_suppliers.sql*** - automatically generated sql-script with queries for processing suppliers 
                        from the data of the suppliers.json file
