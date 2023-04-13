@@ -1,7 +1,7 @@
-from src.setup.settings import FILL_DB, NAME_DB, SUPPLIERS_DATA, SUPPLIERS_SQL
-from src.utils import create_main_db, generate_sql_script, run_auto_fill_db
-
 from typing import Union
+
+from src.config.settings import FILL_DB, NAME_DB, SUPPLIERS_DATA, SUPPLIERS_SQL
+from src.utils import create_main_db, generate_sql_script, run_auto_fill_db
 
 
 STOP_WORDS = ('close', 'exit', 'quit', 'stop')

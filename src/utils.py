@@ -1,8 +1,8 @@
-from requests_pg import req_add_column, req_create_main_db, req_create_suppliers, \
-                        request_insert_suppliers_data, request_update_products
-from setup.connections import close_db_connection, db_connection, start_query_execution
-
 from json import load
+
+from src.config.connections import close_db_connection, db_connection, start_query_execution
+from src.requests_pg import req_add_column, req_create_main_db, req_create_suppliers, \
+                        request_insert_suppliers_data, request_update_products
 
 
 def create_empty_file(filepath: str) -> None:

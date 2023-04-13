@@ -1,6 +1,6 @@
-from src.setup.settings import HOST_PG, PORT_PG, PSW_PG, USER_PG
-
 from psycopg2 import connect, Error
+
+from src.config.settings import HOST_PG, PORT_PG, PSW_PG, USER_PG
 
 
 def close_db_connection(connection: connect, cursor: connect) -> None:
